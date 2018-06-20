@@ -9,9 +9,8 @@ from pubnub.pubnub import PubNub
  
 pnconfig = PNConfiguration()
  
-pnconfig.subscribe_key = 'sub-c-3731efe6-6814-11e8-847f-0e36953de9e2'
-pnconfig.publish_key = 'pub-c-7fdfeca3-5a0d-4530-8ca9-d299c15d9994'
-pnconfig.secret_key = 'sec-c-NGNiMmE3YzktOTRhZi00OGIxLThmM2ItNzZiMzkxM2Y4ZThi'
+pnconfig.subscribe_key = 'Enter your subscribe key here'
+pnconfig.publish_key = 'Enter your publish key here'
  
 pubnub = PubNub(pnconfig)
 
