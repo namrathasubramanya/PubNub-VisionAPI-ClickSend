@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Camera</title>
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.20.1.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+	</head>
+	<body>
+		<div class="booth" style='float:left; width: 450px;'>
+			<video id="video" width="400px" height="300px"></video>
+			<a href="#" id="capture" class="booth-capture-button">Take photo</a>
+			<canvas id="canvas" width="400px" height="300px"></canvas>
+			<img id="photo" src="http://placekitten.com/g/400/300" alt="Dog photo"/>
+			<a href="#" id="save" class="booth-capture-button" download="my-file-name.jpeg">Save photo</a>
+		</div>
+		<script src="photo.js"></script>
+	</body>
+</html>

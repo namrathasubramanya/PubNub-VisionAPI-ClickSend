@@ -1,0 +1,37 @@
+.booth {
+	width: 400px;
+	background-color: #cccccc;
+	border: 10px solid #dddddd;
+	margin: 10px 20px;
+}
+
+.booth-capture-button {
+	display: block;
+	margin: 10px 0;
+	padding: 10px 20px;
+	background-color: #42b0f4;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+}
+
+#canvas {
+	display: none;
+}
+
+body {
+	background: url('background.jpg');
+	overflow-x: hidden;
+	
+	padding: 0;
+}
+
+p {
+	color: black;
+	font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+	font-size: 28px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 30px;
+}
