@@ -32,17 +32,17 @@
 })();
 
 $(document).ready(function() {
-		var pubnub = new PubNub({
-            publish_key: 'pub-c-7fdfeca3-5a0d-4530-8ca9-d299c15d9994',
-        		subscribe_key : 'sub-c-3731efe6-6814-11e8-847f-0e36953de9e2'
-    		});
-		pubnub.addListener({
-      message: function(message) {
-        console.log(message);
-        console.log(message.message);
-        notifyMe(message.message);
-        chatSend(message.message);
-      }
+	var pubnub = new PubNub({
+		publish_key: 'Enter your publish key here',
+		subscribe_key : 'Enter your subscribe key here'
+	});
+	pubnub.addListener({
+      		message: function(message) {
+        	console.log(message);
+        	console.log(message.message);
+        	notifyMe(message.message);
+       	 	chatSend(message.message);
+      	}
     })
 
     pubnub.subscribe({
@@ -73,22 +73,20 @@ $(document).ready(function() {
   		}
 	}
 
-	function chatSend(message) {
-		var request = new XMLHttpRequest();
-		var message = 'cat!';
-		request.open('POST', 'https://api-mapper.clicksend.com/http/v2/send.php');
-		
-		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-		
-		request.onreadystatechange = function () {
-			if (this.readyState === 4) {
-				console.log('Status:', this.status);
-				console.log('Headers:', this.getAllResponseHeaders());
-				console.log('Body:', this.responseText);
-			}
-		};
-		var body = "username=namratha&key=7952FDD6-3B27-D217-9A98-E3C684622E2C&to=+61411111111&message=" + message;
-		request.send(body);
-	}
+       	function chatSend(message) {
+       		var request = new XMLHttpRequest();
+       		var username = 'Enter your ClickSend username here'; 
+       		var key = 'YOUR_CLICKSEND_API_KEY';
+       		var number = 'Enter your number here';
+       		request.open('POST', 'https://api-mapper.clicksend.com/http/v2/send.php');
+       		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+       		request.onreadystatechange = function () {
+          		if (this.readyState === 4) {
+          	   		console.log('Status:', this.status);
+          		}
+       		};
+       		var body = "username="+username+"&key="+key+"&to="+number+"&message=" + message;
+       		request.send(body);
+       	}
 
 
